@@ -1,1 +1,18 @@
-<p>search-user works!</p>
+<h3>Find By Id</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="userId">Id</label>
+      <input type="text" class="form-control" id="userId" required [(ngModel)]="userId" name="userId">
+    </div>
+ 
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let user of users">
+    <h4>{{user.userId}} - {{user.companyId}} {{user.email}} {{user.birthdate}}</h4>
+  </li>
+</ul>
