@@ -11,7 +11,7 @@ import { UserService } from '../user.service';
 export class SearchUserComponent implements OnInit {
  
   userId: number;
-  user: User[];
+  users: User[];
  
   constructor(private userService: UserService) { }
  
@@ -19,9 +19,9 @@ export class SearchUserComponent implements OnInit {
   }
  
   private searchUser() {
-    this.user = [];
+    this.users = [];
     this.userService.getUser(this.userId)
-      .subscribe(user => this.user = user);
+      .subscribe(user => this.users = user);
   }
  
   onSubmit() {

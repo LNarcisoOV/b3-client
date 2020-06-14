@@ -1,10 +1,15 @@
 <div style="padding: 20px;">
-  <h1 style="color: blue">B3 - Client</h1>
   <h3>{{title}}</h3>
   <nav>
-    <a routerLink="user" class="btn btn-primary active" role="button" routerLinkActive="active">Users</a>
-    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
-    <a routerLink="findById" class="btn btn-primary active" role="button" routerLinkActive="active">Search</a>
+    <div>
+      <a routerLink="user" class="btn btn-primary active" role="button" routerLinkActive="active">Users</a>
+    </div>
+    <div>
+      <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
+    </div>
+    <div> 
+      <a routerLink="findById" class="btn btn-primary active" role="button" routerLinkActive="active">Search</a>
+    </div>
   </nav>
-  <router-outlet></router-outlet>
+  <router-outlet></router-outlet> 
 </div>

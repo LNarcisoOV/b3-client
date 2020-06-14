@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private baseUrl = "localhost:8080/b3/user";
+  private baseUrl = "//localhost:8080/b3/user/";
 
   constructor(private http: HttpClient) { }
 
   getUser(id: number): Observable<any>{
-    return this.http.get('${this.baseUrl}/${id}');
+    return this.http.get(this.baseUrl+id);
   }
 
   createUser(user: any): Observable<any> {
@@ -20,14 +20,14 @@ export class UserService {
   }
  
   updateUser(id: number, value: any): Observable<any> {
-    return this.http.put('${this.baseUrl}/${id}', value);
+    return this.http.put(this.baseUrl+id, value);
   }
  
   deleteUser(id: number): Observable<any> {
-    return this.http.delete('${this.baseUrl}/${id}');
+    return this.http.delete(this.baseUrl+id);
   }
  
   getUserList(): Observable<any> {
-    return this.http.get('${this.baseUrl}/');
+    return this.http.get(this.baseUrl);
   }
 }
