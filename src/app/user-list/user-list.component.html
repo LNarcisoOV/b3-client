@@ -1,1 +1,5 @@
-<p>user-list works!</p>
+<h3>Users</h3>
+<div *ngFor="let user of users | async" style="width: 300px;">
+  <app-customer-details [user]='user'></app-customer-details>
+</div>
+ 
