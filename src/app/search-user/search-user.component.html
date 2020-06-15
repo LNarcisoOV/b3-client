@@ -11,8 +11,24 @@
     </div>
   </form>
 </div>
-<ul>
-  <li *ngFor="let user of users">
-    <h4>{{user.userId}} - {{user.companyId}} {{user.email}} {{user.birthdate}}</h4>
-  </li>
-</ul>
+<div [hidden]="!submitted">
+  <h3>User</h3>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Company Id</th>
+          <th>Email</th>
+          <th>Birthdate</th>
+        </tr>
+      </thead>
+      <tbody>
+       <tr>
+             <td>{{user.companyId}}</td>
+             <td>{{user.email}}</td>
+             <td>{{user.birthdate}}</td>
+         </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,20 +1,22 @@
-<div *ngIf="user">
-    <div>
-        <label>UserId: </label> {{user.userId}}
-    </div>
-    <div>
-        <label>CompanyId: </label> {{user.companyId}}
-    </div>
-    <div>
-        <label>Email: </label> {{user.email}}
-    </div>
-    <div>
-        <label>Birthdate: </label> {{user.birthdate}}
-    </div>
-   
-    <a class="button is-small btn-primary" (click)='updateUser()'>Update</a>
-    <br/>
-    <a class="button is-small btn-danger" (click)='deleteUser()'>Delete</a>
-   
-    <hr />
-  </div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Company Id</th>
+        <th>Email</th>
+        <th>Birthdate</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+           <td>{{user.companyId}}</td>
+           <td>{{user.email}}</td>
+           <td>{{user.birthdate}}</td>
+           <td><a class="button is-small btn-primary" (click)='updateUser()'>Update</a></td>
+           <td><a class="button is-small btn-danger" (click)='deleteUser()'>Delete</a></td>
+       </tr>
+    </tbody>
+  </table>
+</div>

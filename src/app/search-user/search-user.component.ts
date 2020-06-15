@@ -11,17 +11,19 @@ import { UserService } from '../user.service';
 export class SearchUserComponent implements OnInit {
  
   userId: number;
-  users: User[];
+  user: User;
+  submitted = false;
  
   constructor(private userService: UserService) { }
  
   ngOnInit() {
+    this.submitted = false;
   }
  
   private searchUser() {
-    this.users = [];
     this.userService.getUser(this.userId)
-      .subscribe(user => this.users = user);
+      .subscribe(user => this.user = user);
+      this.submitted = true;
   }
  
   onSubmit() {
