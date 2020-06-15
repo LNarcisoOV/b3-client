@@ -2,6 +2,7 @@
   <table>
     <thead>
       <tr>
+        <th>User Id</th>
         <th>Company Id</th>
         <th>Email</th>
         <th>Birthdate</th>
@@ -10,13 +11,14 @@
       </tr>
     </thead>
     <tbody>
-     <tr>
-           <td>{{user.companyId}}</td>
-           <td>{{user.email}}</td>
-           <td>{{user.birthdate}}</td>
-           <td><a class="button is-small btn-primary" (click)='updateUser()'>Update</a></td>
-           <td><a class="button is-small btn-danger" (click)='deleteUser()'>Delete</a></td>
-       </tr>
+      <tr>
+        <td>{{user.userId}}</td>
+        <td>{{user.companyId}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.birthdate}}</td>
+        <td><button class="button is-small btn-primary" (click)='updateUser()'>Update</button></td>
+        <td><button class="button is-small btn-danger" (click)='deleteUser()'>Delete</button></td>
+      </tr>
     </tbody>
   </table>
 </div>
